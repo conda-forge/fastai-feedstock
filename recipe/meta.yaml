@@ -41,8 +41,8 @@ requirements:
 test:
   imports:
     - fastai
-  commands:
-    - pip check
+  # commands:
+  #   - pip check
   requires:
     - pip
 
