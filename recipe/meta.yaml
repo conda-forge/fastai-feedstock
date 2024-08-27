@@ -1,5 +1,5 @@
 {% set name = "fastai" %}
-{% set version = "2.7.16" %}
+{% set version = "2.7.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
-  sha256: 317358bf8e0f6147d81be255dfa918d3340ee0b98796e9fae8f8a5d266234b98
+  sha256: 8355302247573b95fd8f1e738236d3601900d02103802298f6b873f2a5d4d88a
 
 build:
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - pip
     - packaging
     - fastdownload >=0.0.5,<2
-    - fastcore >=1.5.29,<1.6
+    - fastcore >=1.5.29,<1.8
     - torchvision >=0.11
     - matplotlib-base
     - pandas
