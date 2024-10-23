@@ -1,5 +1,5 @@
 {% set name = "fastai" %}
-{% set version = "2.7.17" %}
+{% set version = "2.7.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
-  sha256: 8355302247573b95fd8f1e738236d3601900d02103802298f6b873f2a5d4d88a
+  sha256: b20593dbcae7522f1d77a8f5163d1fd60314f292640496804dc356e41cb36454
 
 build:
   entry_points:
@@ -37,7 +37,7 @@ requirements:
     - scikit-learn
     - scipy
     - spacy <4
-    - pytorch >=1.10,<2.5
+    - pytorch >=1.10,<2.6
 
 test:
   imports:
