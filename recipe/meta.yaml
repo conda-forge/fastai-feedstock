@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
   sha256: b20593dbcae7522f1d77a8f5163d1fd60314f292640496804dc356e41cb36454
 
 build:
@@ -14,15 +14,15 @@ build:
     - configure_accelerate=fastai.distributed:configure_accelerate
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pip
     - packaging
     - fastdownload >=0.0.5,<2
@@ -46,6 +46,7 @@ test:
   #   - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/fastai/fastai
