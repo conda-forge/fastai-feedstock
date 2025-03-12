@@ -1,5 +1,5 @@
 {% set name = "fastai" %}
-{% set version = "2.7.18" %}
+{% set version = "2.7.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
-  sha256: b20593dbcae7522f1d77a8f5163d1fd60314f292640496804dc356e41cb36454
+  sha256: 0a804006d3b6364acd5544f3439f2f05d45edabaf88e2dba8893b37a66b836c8
 
 build:
   entry_points:
     - configure_accelerate=fastai.distributed:configure_accelerate
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -37,7 +37,7 @@ requirements:
     - scikit-learn
     - scipy
     - spacy <4
-    - pytorch >=1.10,<2.6
+    - pytorch >=1.10,<2.7
 
 test:
   imports:
