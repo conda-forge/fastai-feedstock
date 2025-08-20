@@ -1,5 +1,5 @@
 {% set name = "fastai" %}
-{% set version = "2.8.3" %}
+{% set version = "2.8.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
-  sha256: 960501c5ff2f79ff479c05a1d9e371b4544c787c438ee709ad911c38dabd0caf
+  sha256: 0264285d9c6768d7a9789ce5c3703a8e121f560f40067791238b95d566e4258e
 
 build:
   entry_points:
