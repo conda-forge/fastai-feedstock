@@ -1,5 +1,5 @@
 {% set name = "fastai" %}
-{% set version = "2.8.4" %}
+{% set version = "2.8.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
-  sha256: 0264285d9c6768d7a9789ce5c3703a8e121f560f40067791238b95d566e4258e
+  sha256: 92aee77718fc8799c125367cc157a7a92aae67a0a8a93c9d7b89503bdac5c9b6
 
 build:
   entry_points:
@@ -41,7 +41,7 @@ requirements:
     - spacy <4
     - plum-dispatch
     - cloudpickle
-    - pytorch >=1.10,<2.9
+    - pytorch >=1.10,<2.10
 
 test:
   imports:
