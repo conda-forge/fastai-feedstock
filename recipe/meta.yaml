@@ -1,5 +1,5 @@
 {% set name = "fastai" %}
-{% set version = "2.8.7" %}
+{% set version = "2.8.12" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
-  sha256: 93be109daab077a73279bb2aba27fa72a206bbf055b0f1921475afde69b7705f
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/fastai-{{ version }}.tar.gz
+  sha256: b995efbb1ade78c99cc228e65db7493a668eb10cfa4945e21d2e348d738aba04
 
 build:
   entry_points:
@@ -26,9 +26,9 @@ requirements:
     - python >={{ python_min }}
     - pip
     - packaging
-    - fastdownload >=0.0.5,<2
-    - fastcore >=1.8.0
-    - fasttransform >=0.0.2
+    - fastdownload >=0.0.8,<2
+    - fastcore >=2.2.22
+    - fasttransform >=0.0.3
     - torchvision >=0.11
     - matplotlib-base
     - pandas
@@ -39,7 +39,7 @@ requirements:
     - scikit-learn
     - scipy
     - spacy <4
-    - plum-dispatch
+    - plum-dispatch <2.10
     - cloudpickle
     - pytorch >=1.10,<3
 
